@@ -1,0 +1,92 @@
+RESULTS - Neptune Rover Search (homework.py)
+Checked against all 50 provided training cases in training/
+Verification date: 2026-10-23
+
+SUMMARY
+-------
+Total test cases:    50
+Passed:               50
+Failed:                0
+
+A pass means: the path homework.py produced is a legal path from start to goal
+(every step is a real edge, and every step satisfies the energy/momentum rule),
+and its total cost matches the reference cost in training/pathlenN.txt
+(hop count for BFS, summed distance for UCS and A*).
+
+BY ALGORITHM
+------------
+BFS:  11/11 passed
+UCS:  20/20 passed
+A*:   19/19 passed
+
+PER-TESTCASE RESULTS
+---------------------
+Test  Algo  Result  Time(s)   Cost (produced)   Cost (expected)
+1     A*    PASS    0.618     13720.385          13720.4
+2     BFS   PASS    0.357     53                 53
+3     A*    PASS    2.964     28544.749          28544.7
+4     BFS   PASS    0.327     41                 41
+5     BFS   PASS    0.155     42                 42
+6     UCS   PASS    0.442     15635.186          15635.2
+7     A*    PASS    0.423     15332.555          15332.6
+8     UCS   PASS    0.444     7464.201           7464.2
+9     UCS   PASS    1.358     6020.137           6020.14
+10    UCS   PASS    1.380     13909.909          13909.9
+11    A*    PASS    1.387     22202.093          22202.1
+12    A*    PASS    0.205     4424.179           4424.18
+13    UCS   PASS    2.343     4547.866           4547.87
+14    A*    PASS    0.303     5037.796           5037.8
+15    UCS   PASS    0.208     11341.141          11341.1
+16    UCS   PASS    0.364     15656.549          15656.5
+17    UCS   PASS    0.160     8355.875           8355.87
+18    UCS   PASS    0.449     15322.809          15322.8
+19    A*    PASS    2.087     5308.379           5308.38
+20    A*    PASS    0.130     4945.136           4945.14
+21    UCS   PASS    5.999     8459.307           8459.31
+22    UCS   PASS    0.406     10223.951          10224.0
+23    BFS   PASS    0.221     19                 19
+24    BFS   PASS    0.457     37                 37
+25    UCS   PASS    2.014     10954.811          10954.8
+26    A*    PASS    0.517     23408.516          23408.5
+27    UCS   PASS    0.232     3002.243           3002.24
+28    UCS   PASS    3.002     15235.723          15235.7
+29    UCS   PASS    0.799     13250.628          13250.6
+30    A*    PASS    0.273     11810.163          11810.2
+31    BFS   PASS    1.009     14                 14
+32    UCS   PASS    0.398     3806.461           3806.46
+33    A*    PASS    0.287     3583.367           3583.37
+34    BFS   PASS    0.212     34                 34
+35    A*    PASS    0.539     11759.169          11759.2
+36    BFS   PASS    0.285     26                 26
+37    A*    PASS    0.398     6662.946           6662.95
+38    A*    PASS    0.344     3033.153           3033.15
+39    BFS   PASS    0.285     20                 20
+40    A*    PASS    4.846     5146.286           5146.29
+41    UCS   PASS    2.537     4889.385           4889.38
+42    UCS   PASS    0.139     2556.612           2556.61
+43    UCS   PASS    0.216     3528.335           3528.34
+44    A*    PASS    0.667     9913.430           9913.43
+45    UCS   PASS    0.498     7552.898           7552.9
+46    A*    PASS    0.915     2994.797           2994.8
+47    A*    PASS    0.324     2338.701           2338.7
+48    BFS   PASS    0.388     28                 28
+49    BFS   PASS    0.306     36                 36
+50    A*    PASS    0.665     10345.633          10345.6
+
+TIMING NOTES
+------------
+Slowest case: Test 21 (UCS), 5.999s
+Fastest case: Test 20 (A*), 0.130s
+All 50 cases completed well within reasonable grading time limits.
+
+NOTES
+-----
+- Costs are compared with a relative tolerance of 1% to account for floating
+  point differences between independently recomputed path costs and the
+  reference values.
+- No test case produced an invalid path, a cost mismatch, or an unexpected
+  FAIL/success mismatch.
+- Verification method: for each training case, input.txt was set to the given
+  test input, homework.py was executed, and the resulting output.txt path was
+  independently checked for edge validity, energy/momentum legality, and cost
+  against the reference pathlenN.txt file.
