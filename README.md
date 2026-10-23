@@ -83,4 +83,26 @@ Each training case can be checked by copying `inputN.txt` to `input.txt`, runnin
 2. its cost (hop count for BFS, summed edge distance for UCS/A*) matches
    `pathlenN.txt`.
 
-See `RESULTS.txt` for the outcome of this check across all 50 training cases.
+See `RESULTS.txt` for the full per-testcase breakdown, or the summary below.
+
+## Results
+
+Verified against all 50 provided training cases (2026-10-23).
+
+**50/50 passed.**
+
+| Algorithm | Passed |
+|---|---|
+| BFS | 11/11 |
+| UCS | 20/20 |
+| A* | 19/19 |
+
+A pass means the produced path is legal (every step is a real edge and respects
+the energy/momentum rule) and its cost matches the reference value in
+`training/pathlenN.txt`, within a 1% tolerance for floating-point differences.
+
+Timing: slowest case was Test 21 (UCS) at 5.999s, fastest was Test 20 (A*) at
+0.130s. All 50 cases completed well within typical grading time limits.
+
+Full per-testcase results (cost produced vs. expected, timing) are in
+[`RESULTS.txt`](RESULTS.txt).
